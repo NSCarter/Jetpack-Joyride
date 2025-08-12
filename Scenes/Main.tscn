@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3k204qxqxlup"]
+[gd_scene load_steps=4 format=3 uid="uid://b3k204qxqxlup"]
 
 [ext_resource type="PackedScene" uid="uid://dgwhq8tqnsmy7" path="res://Scenes/Player.tscn" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://c6ex4jhw20in7" path="res://Scenes/ObstacleSpawner.tscn" id="2_idj7w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c1w88"]
 size = Vector2(1164, 74)
@@ -20,3 +21,5 @@ position = Vector2(576, 623)
 shape = SubResource("RectangleShape2D_c1w88")
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
+
+[node name="ObstacleSpawner" parent="." instance=ExtResource("2_idj7w")]
