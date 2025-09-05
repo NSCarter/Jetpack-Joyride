@@ -7,8 +7,6 @@ var game_over = false
 var _obstacles = []
 var _wait_time = 2.5
 
-#func _ready():
-	#_on_spawn_timer_timeout()
 
 func _process(delta):
 	if not game_over:

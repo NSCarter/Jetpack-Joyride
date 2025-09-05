@@ -14,6 +14,10 @@ config/name="Jetpack Joyride"
 run/main_scene="uid://b3k204qxqxlup"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[autoload]
+
+Stats="*res://Scripts/stats.gd"
+
 [display]
 
 window/size/mode=2

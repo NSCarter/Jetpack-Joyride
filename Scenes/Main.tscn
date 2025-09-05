@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3k204qxqxlup"]
+[gd_scene load_steps=7 format=3 uid="uid://b3k204qxqxlup"]
 
 [ext_resource type="PackedScene" uid="uid://dgwhq8tqnsmy7" path="res://Scenes/Player.tscn" id="1_r150o"]
+[ext_resource type="Script" uid="uid://bbkcuskeagww1" path="res://Scripts/main.gd" id="1_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://c6ex4jhw20in7" path="res://Scenes/ObstacleSpawner.tscn" id="2_idj7w"]
+[ext_resource type="Script" uid="uid://cgesyom7utex1" path="res://Scripts/score.gd" id="3_kln2b"]
+[ext_resource type="FontFile" uid="uid://cg6v0ne5hkvcv" path="res://Assets/Fonts/WDXLLubrifontTC-Regular.ttf" id="4_pbw6q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c1w88"]
 size = Vector2(1164, 74)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_rgh2o")
 
 [node name="Floor" type="Area2D" parent="."]
 
@@ -23,3 +27,23 @@ shape = SubResource("RectangleShape2D_c1w88")
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
 
 [node name="ObstacleSpawner" parent="." instance=ExtResource("2_idj7w")]
+
+[node name="Score" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 10.0
+offset_right = 634.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("4_pbw6q")
+theme_override_font_sizes/font_size = 50
+text = "0000"
+script = ExtResource("3_kln2b")
+
+[node name="HighScore" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 65.0
+offset_right = 128.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.986752, 0.986752, 0.986752, 1)
+theme_override_fonts/font = ExtResource("4_pbw6q")
+theme_override_font_sizes/font_size = 25
+text = "Best: 000000"
